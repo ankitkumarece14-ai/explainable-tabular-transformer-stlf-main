@@ -1,0 +1,15 @@
+{
+  "n_blocks": 4,
+  "d_token": 128,
+  "n_heads": 8,
+  "d_ffn_factor": 2.0,
+  "attention_dropout": 0.1,
+  "ffn_dropout": 0.1,
+  "residual_dropout": 0.0,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-05,
+  "epochs": 300,
+  "patience": 50,
+  "device": "cuda",
+  "use_amp": true
+}

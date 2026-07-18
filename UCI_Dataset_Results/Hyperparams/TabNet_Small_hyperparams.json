@@ -1,0 +1,15 @@
+{
+  "n_d": 8,
+  "n_a": 8,
+  "n_steps": 3,
+  "gamma": 1.0,
+  "lambda_sparse": 0.01,
+  "n_independent": 1,
+  "n_shared": 1,
+  "max_epochs": 50,
+  "patience": 10,
+  "batch_size": 16,
+  "virtual_batch_size": 8,
+  "lr": 0.1,
+  "device_name": "cuda"
+}

@@ -1,0 +1,12 @@
+{
+  "hidden_dim": 128,
+  "num_layers": 2,
+  "dropout": 0.2,
+  "bidirectional": true,
+  "epochs": 150,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "patience": 30,
+  "sequence_length": 10,
+  "batch_size": 64
+}

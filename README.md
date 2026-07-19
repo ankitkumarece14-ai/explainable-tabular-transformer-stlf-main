@@ -1,15 +1,8 @@
-# ⚡ Explainable Tabular Transformer-Based Residential Load Forecasting with Edge-IoT Validation
+# ⚡  Residential Load Forecasting Using Explainable Tabular Transformers
 
 > **Companion Code Repository** — This repository contains the complete source code, datasets, experimental results, and reproducibility artifacts for the journal paper:
 >
-> **"Explainable Tabular Transformer-Based Residential Load Forecasting with Edge-IoT Validation"**
->
-> *Ankit Kumar<sup>1,\*</sup>, Amit Kumar Behera<sup>2</sup>, Suresh Kumar Gaddi<sup>3</sup>, Maheshkumar H. Kolekar<sup>1</sup>, and Rajiv Misra<sup>2</sup>*
->
-> <sup>1</sup> Department of Electrical Engineering, Indian Institute of Technology Patna, Bihar, India
-> <sup>2</sup> Department of Computer Science and Engineering, Indian Institute of Technology Patna, Bihar, India
-> <sup>3</sup> National Institute of Electronics and Information Technology (NIELIT), Patna, Bihar, India
->
+> **" Residential Load Forecasting Using Explainable Tabular Transformers"**
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C.svg)](https://pytorch.org/)
@@ -37,23 +30,8 @@
 
 ---
 
-## Abstract
-
-Accurate short-term residential load forecasting (STLF) is critical for demand-side smart-grid management, renewable-energy integration, and dynamic pricing. Although machine-learning and deep-learning methods have advanced substantially, two gaps remain. First, existing methods are often validated on curated public benchmarks and are less frequently evaluated under the sensor noise, packet loss, clock drift, and temporal irregularities encountered in real Internet-of-Things (IoT) deployments. Second, tabular transformer architectures — which model structured features as relational tokens through multi-head self-attention — remain underexplored for residential energy forecasting.
-
-This paper addresses both gaps through an integrated evaluation that combines tabular deep learning with an edge-to-cloud IoT pipeline. A real-world dataset was collected from a residential hostel using a low-cost dual-channel edge-IoT platform, capturing practical deployment noise and irregularity. A temporally causal feature-engineering pipeline is introduced for dual-channel current sensing, including logarithmic transforms, differential signals, power-imbalance metrics, crest-factor ratios, volatility statistics, and cyclical temporal encodings. **FT-Transformer, TabPFN, and TabNet** are benchmarked against fifteen baselines spanning statistical, gradient-boosting, recurrent, and hybrid models under a unified, leakage-free protocol on both the UCI Household Power Consumption benchmark and the real-world IoT dataset. Explainability is assessed through SHAP, attention-weight visualization, and permutation feature importance, while ablation studies quantify the contribution of engineered features.
 
 **On the custom IoT dataset, FT-Transformer achieved R² = 0.9676, RMSE = 1.0873, MAE = 0.8656, and MAPE = 1.47%.** **On the UCI benchmark, TabPFN achieved R² = 0.9955 and RMSE = 0.0209.**
-
----
-
-## Key Contributions
-
-1. **End-to-end edge-IoT data acquisition pipeline** for dual-channel residential current monitoring using Raspberry Pi, Hall-effect current sensors, and SX1262 LoRa communication
-2. **Temporally causal feature-engineering pipeline** for both the UCI HPC benchmark and the custom IoT dataset — including lag features, rolling statistics, electrical ratios, crest factors, volatility measures, and cyclical encodings
-3. **Systematic evaluation of FT-Transformer, TabPFN, and TabNet** against statistical, tree-based, recurrent, convolutional, and hybrid baselines under a unified chronological train/validation/test protocol
-4. **Unified explainability methodology** spanning heterogeneous model families — SHAP for tree-based models, attention-based inspection for FT-Transformer, and permutation feature importance across all model types
-5. **Deployment feasibility study** through training time, inference latency, energy consumption, ONNX-oriented edge inference, and LoRa communication overhead
 
 ---
 

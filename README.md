@@ -241,16 +241,6 @@ Total Power (S1 + S2) Forecasting on test set:
 | 11 | LSTM | −0.202 | 6.628 | 4.612 | 7.30 | 12.18 |
 | 12 | LightGBM | −1.438 | 9.427 | 3.050 | 4.71 | 0.12 |
 
-### Key Findings
-
-- **FT-Transformer** consistently achieves top-tier performance on both datasets, demonstrating the effectiveness of tabular transformer architectures for residential energy forecasting
-- **TabPFN** achieves the highest R² (0.9955) on the UCI benchmark — a pre-trained foundation model requiring minimal training time (~0.33 s)
-- **Tabular DL models** (FT-Transformer, TabPFN) outperform traditional gradient boosting and tree-based models on both datasets under temporally causal feature engineering
-- **LSTM/BiLSTM** underperform compared to tabular models, suggesting that feature-tokenization via multi-head self-attention captures non-linear electrical relationships more effectively than sequential recurrence for this task
-- **Domain-specific feature engineering** (crest factors, volatility, power imbalance, cyclical encodings) is critical to enabling deep learning superiority over simpler models
-
----
-
 ## Installation & Setup
 
 ### Prerequisites
